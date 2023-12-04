@@ -18,6 +18,8 @@ const Styles = styled.div<{ size: number }>`
     border: 2px solid #3C2857;
     border-radius: 8px;
     box-sizing: border-box;
+    transform: translateX(-175%);
+    transition: transform 0.5s ease;
 `
 
 type Props = {
@@ -34,6 +36,7 @@ export function Minimap(props: Props) {
   const container = useRef<HTMLElement | null>()
   const [containerRef, { width: containerWidth }] = useElementSize()
   const scale = (v: number) => v * containerWidth
+
   const ref = useCallback((node: HTMLDivElement | null) => {
     container.current = node
     containerRef(node)
@@ -41,6 +44,7 @@ export function Minimap(props: Props) {
 
   return <Styles
     size={props.size}
+    id='minimap'
     style={{
       width: px(props.size * props.ratio),
       height: px(props.size)
