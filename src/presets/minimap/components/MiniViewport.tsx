@@ -7,8 +7,8 @@ import { px } from '../utils'
 
 const MiniViewportStyles = styled.div`
   position: absolute;
-  background: rgba(255, 251, 128, 0.32);
-  border: 1px solid #ffe52b;
+  background: #090E2CCC;
+  border: 1px solid #121D64;
 `
 
 export function MiniViewport(props: Rect & { containerWidth: number, start(): Transform, translate: Translate }) {

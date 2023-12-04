@@ -12,22 +12,22 @@ const Styles = styled.div<{ size: number }>`
     position: absolute;
     right: 24px;
     bottom: 24px;
-    background: rgba(229, 234, 239, 0.65);
+    background: #010418;
     padding: 20px;
     overflow: hidden;
-    border: 1px solid #b1b7ff;
+    border: 2px solid #3C2857;
     border-radius: 8px;
     box-sizing: border-box;
 `
 
 type Props = {
-    size: number
-    ratio: number
-    nodes: Rect[]
-    viewport: Rect
-    start(): Transform
-    translate: Translate
-    point(x: number, y: number): void
+  size: number
+  ratio: number
+  nodes: Rect[]
+  viewport: Rect
+  start(): Transform
+  translate: Translate
+  point(x: number, y: number): void
 }
 
 export function Minimap(props: Props) {
