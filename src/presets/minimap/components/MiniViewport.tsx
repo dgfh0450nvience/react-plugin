@@ -17,6 +17,7 @@ export function MiniViewport(props: Rect & { containerWidth: number, start(): Tr
   const drag = useDrag((dx, dy) => props.translate(invert(-dx), invert(-dy)), e => ({ x: e.pageX, y: e.pageY }))
 
   return <MiniViewportStyles
+    id='minimap-viewport'
     onPointerDown={drag.start}
     style={{
       left: px(scale(props.left)),
